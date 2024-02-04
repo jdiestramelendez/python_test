@@ -22,6 +22,9 @@ class EmpleadoAsalariado(Empleado):
     def __init__(self, numero_seguro_social, nombre,apellido, sexo,fecha,salario_semanal):
         super().__init__(numero_seguro_social,nombre,apellido,sexo,fecha)
         self.__salario_semanal=salario_semanal
+        self.__numero_seguro_social=numero_seguro_social
+        self.__nombre=nombre
+        self.__apellido=apellido
         
     def registrar(self):
         self.__salario_semanal=float(input('Ingrese el salario semanal: '))
@@ -35,9 +38,12 @@ class EmpleadoAsalariado(Empleado):
 class EmpleadoPorHoras(Empleado):
     #constructor
     def __init__(self, numero_seguro_social, nombre,apellido, sexo,fecha,sueldo_hora,horas_trabajadas):
-        super().__init__(self.__numero_seguro_social,nombre,apellido,sexo,fecha)
+        super().__init__(numero_seguro_social,nombre,apellido,sexo,fecha)
         self.__sueldo_hora=sueldo_hora
         self.__horas_trabajadas=horas_trabajadas
+        self.__numero_seguro_social=numero_seguro_social
+        self.__nombre=nombre
+        self.__apellido=apellido
     def registrar(self):
         self.__sueldo_hora=float(input('Ingrese el sueldo por hora: '))
         self.__horas_trabajadas=float(input('Ingrese el numero de horas trabajadas: '))    

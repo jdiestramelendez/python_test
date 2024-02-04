@@ -6,18 +6,18 @@ class EmpleadoController:
         pass
     
     # metodo crea objeto de tipo persona
-    def crearEmpleado(self,tipo,ns,nom,apel,sx,v1,v2):
+    def crearEmpleado(self,tipo,ns,nom,apel,sx, fecha, v1,v2):
         self.per=None
         match tipo:
             case Opcion.EmpleadoAsalariado.value:
                 
-                self.per=EmpleadoAsalariado(ns,nom,apel,sx,v1,v2)
+                self.per=EmpleadoAsalariado(ns,nom,apel,sx,fecha,v1)
             case Opcion.EmpleadoPorHoras.value:
                 
-                self.per=EmpleadoPorHoras(ns,nom,apel,sx,v1,v2)
+                self.per=EmpleadoPorHoras(ns,nom,apel,sx,fecha,v1,v2)
             case Opcion.EmpleadoporComision.value:
             
-                self.per=EmpleadoporComision(ns,nom,apel,sx,v1,v2)
+                self.per=EmpleadoporComision(ns,nom,apel,sx,fecha,v1,v2)
         return self.per
     
                 
